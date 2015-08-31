@@ -26,6 +26,7 @@ namespace API.ServiceModel.Event
         public string Description { get; set; }
         public string Remark { get; set; }
         public string ItemName { get; set; }
+        public string AllowSkipFlag { get; set; }
     }
     public class List_Container_Logic
     {
