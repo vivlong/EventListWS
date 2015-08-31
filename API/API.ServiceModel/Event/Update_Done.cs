@@ -25,7 +25,6 @@ namespace API.ServiceModel.Event
         {
             public DateTime DoneDateTime { get; set; }
             public string DoneFlag { get; set; }
-            public string MobileDoneFlag { get; set; }
             public string JobNo { get; set; }
             public int JobLineItemNo { get; set; }
             public int LineItemNo { get; set; }
@@ -40,7 +39,7 @@ namespace API.ServiceModel.Event
             {
                 using (var db = DbConnectionFactory.OpenDbConnection())
                 {
-                    Result = db.Update<Jmjm4>(new { DoneDateTime = request.DoneDateTime, DoneFlag = request.DoneFlag, MobileDoneFlag = request.DoneFlag, Remark = request.Remark }, p => p.JobNo == request.JobNo && p.JobLineItemNo == request.JobLineItemNo && p.LineItemNo == request.LineItemNo);
+                    Result = db.Update<Jmjm4>(new { DoneDateTime = request.DoneDateTime, DoneFlag = request.DoneFlag, Remark = request.Remark }, p => p.JobNo == request.JobNo && p.JobLineItemNo == request.JobLineItemNo && p.LineItemNo == request.LineItemNo);
                 }
             }
             catch { throw; } 
