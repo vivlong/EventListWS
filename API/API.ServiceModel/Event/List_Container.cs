@@ -10,7 +10,7 @@ using ServiceStack.OrmLite;
 
 namespace API.ServiceModel.Event
 {
-    [Route("/api/event/action/list/container/{PhoneNumber}/{JobNo}", "Get")]
+    [Route("/event/action/list/container/{PhoneNumber}/{JobNo}", "Get")]
     public class List_Container : IReturn<CommonResponse>
     {
         public string PhoneNumber { get; set; }

@@ -9,7 +9,7 @@ using ServiceStack.OrmLite;
 
 namespace API.ServiceModel.Event
 {
-    [Route("/api/event/action/update/done", "Post")]
+    [Route("/event/action/update/done", "Post")]
     public class Update_Done : IReturn<CommonResponse>
     {
         public string JobNo { get; set; }

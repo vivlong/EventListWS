@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using API.ServiceModel;
 using API.ServiceModel.Event;
 using API.ServiceInterface.Event;
+using System.IO;
 
 namespace API.ServiceInterface
 {

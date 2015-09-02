@@ -20,7 +20,7 @@ namespace API
     {
         private static string strSecretKey;
         public AppHost()
-            : base("API", typeof(EventServices).Assembly)
+            : base("TmsWS", typeof(EventServices).Assembly)
         {
 
         }
@@ -33,7 +33,7 @@ namespace API
                 //  { "Access-Control-Allow-Origin", "*" },
                 //  { "Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS" },
                 //  { "Access-Control-Allow-Headers", "Content-Type, Signature" },
-                //},
+                //}, 
             });
             CorsFeature cf = new CorsFeature(allowedOrigins: "*", allowedMethods: "GET, POST, PUT, DELETE, OPTIONS", allowedHeaders: "Content-Type, Signature", allowCredentials: false);
             this.Plugins.Add(cf);
@@ -44,7 +44,6 @@ namespace API
             //this.Plugins.Add(new AuthFeature(
             //    () => new CustomUserSession(), new[] { new CustomCredentialsAuthProvider() }
             //    ));
-
             //container.Register<ICacheClient>(new MemoryCacheClient());
             //var userRepository = new InMemoryAuthRepository();
             //container.Register<IUserAuthRepository>(userRepository);
@@ -70,11 +69,6 @@ namespace API
             container.RegisterAutoWired<API.ServiceModel.Event.List_JobNo_Logic>();
             container.RegisterAutoWired<API.ServiceModel.Event.List_Container_Logic>();
             container.RegisterAutoWired<API.ServiceModel.Event.Update_Done_Logic>();
-            //container.RegisterAutoWired<API.ServiceModel.Wms.LoginLogic>();
-            //container.RegisterAutoWired<API.ServiceModel.Wms.TableFieldLogic>();
-            //container.RegisterAutoWired<API.ServiceModel.Wms.SQLCommandLogic>();
-            //container.RegisterAutoWired<API.ServiceModel.Wms.WhScanLogic>();
-            //container.RegisterAutoWired<API.ServiceModel.Wms.ConfirmLogic>();
         }
 
         //public class CustomUserSession : AuthUserSession

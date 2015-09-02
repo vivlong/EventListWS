@@ -9,7 +9,7 @@ using ServiceStack.OrmLite;
 
 namespace API.ServiceModel.Event
 {
-    [Route("/api/event/action/list/login", "Post")]
+    [Route("/event/action/list/login", "Post")]
     public class List_Login : IReturn<CommonResponse>
     {
         public string PhoneNumber { get; set; }
