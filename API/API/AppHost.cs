@@ -13,16 +13,17 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 using API.ServiceInterface;
+using System.Reflection;
 
 namespace API
 {
     public class AppHost : AppHostBase
     {
+        private static string ver = Assembly.GetExecutingAssembly().GetName().Version.ToString();
         private static string strSecretKey;
         public AppHost()
-            : base("TmsWS", typeof(EventServices).Assembly)
+            : base("TmsWS WebService v" + ver, typeof(EventServices).Assembly)
         {
-
         }
         public override void Configure(Container container)
         {
@@ -33,7 +34,8 @@ namespace API
                 //  { "Access-Control-Allow-Origin", "*" },
                 //  { "Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS" },
                 //  { "Access-Control-Allow-Headers", "Content-Type, Signature" },
-                //}, 
+                //},
+                EnableFeatures = Feature.All.Remove(Feature.Xml | Feature.Jsv | Feature.Csv | Feature.Soap11 | Feature.Soap12)
             });
             CorsFeature cf = new CorsFeature(allowedOrigins: "*", allowedMethods: "GET, POST, PUT, DELETE, OPTIONS", allowedHeaders: "Content-Type, Signature", allowCredentials: false);
             this.Plugins.Add(cf);

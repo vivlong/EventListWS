@@ -12,7 +12,7 @@ using System.IO;
 namespace API.ServiceInterface
 {
     public class EventServices : Service
-    {
+    {        
         public Auth auth { get; set; }
         public List_Login_Logic list_Login_Logic { get; set; }
         public List_Container_Logic list_Container_Logic { get; set; }

@@ -35,6 +35,7 @@ namespace API.ServiceModel.Event
             public string JobNo { get; set; }
             public int LineItemNo { get; set; }
             public string Description { get; set; }
+            public string AllowSkipFlag { get; set; }
         }
         private class Jmjm4
         {
