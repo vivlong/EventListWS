@@ -35,6 +35,11 @@ namespace API.ServiceModel.Event
             public string JobNo { get; set; }
             public int LineItemNo { get; set; }
             public string Description { get; set; }
+            public string EventCode { get; set; }
+        }
+        private class Jmje1
+        {
+            public string EventCode { get; set; }
             public string AllowSkipFlag { get; set; }
         }
         private class Jmjm4
@@ -49,7 +54,6 @@ namespace API.ServiceModel.Event
             public string ItemName { get; set; }
         }
         public IDbConnectionFactory DbConnectionFactory { get; set; }
-        public IConnectString ConnectString { get; set; }
         public List<List_Container_Response> GetList(List_Container request)
         {
             List<List_Container_Response> Result = null;
@@ -60,6 +64,7 @@ namespace API.ServiceModel.Event
                     Result = db.Select<List_Container_Response>(
                         db.From<Jmjm4>()
                         .LeftJoin<Jmjm4, Jmjm3>((j4, j3) => j4.JobNo == j3.JobNo && j4.JobLineItemNo == j3.LineItemNo)
+                        .LeftJoin<Jmjm3, Jmje1>((j3, j1) => j1.EventCode == j3.EventCode)
                         .Where(j4 => j4.PhoneNumber == request.PhoneNumber && j4.JobNo == request.JobNo && (j4.DoneFlag != "Y" || j4.DoneFlag == null))
                     );
                 }
