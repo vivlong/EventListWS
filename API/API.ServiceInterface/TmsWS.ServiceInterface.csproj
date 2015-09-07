@@ -7,8 +7,8 @@
     <ProjectGuid>{801A0F89-D5F6-49A6-BCEA-6624388C98A4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>API.ServiceInterface</RootNamespace>
-    <AssemblyName>API.ServiceInterface</AssemblyName>
+    <RootNamespace>TmsWS.ServiceInterface</RootNamespace>
+    <AssemblyName>TmsWS.ServiceInterface</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
@@ -73,9 +73,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\API.ServiceModel\API.ServiceModel.csproj">
+    <ProjectReference Include="..\API.ServiceModel\TmsWS.ServiceModel.csproj">
       <Project>{53E82AC1-DD1D-4C66-B55F-F9F4ACFB2F40}</Project>
-      <Name>API.ServiceModel</Name>
+      <Name>TmsWS.ServiceModel</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API\API.csproj", "{4389B305-B381-4B50-B1A8-BBB5259A0524}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TmsWS", "API\API\TmsWS.csproj", "{4389B305-B381-4B50-B1A8-BBB5259A0524}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API.ServiceModel", "API\API.ServiceModel\API.ServiceModel.csproj", "{53E82AC1-DD1D-4C66-B55F-F9F4ACFB2F40}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TmsWS.ServiceModel", "API\API.ServiceModel\TmsWS.ServiceModel.csproj", "{53E82AC1-DD1D-4C66-B55F-F9F4ACFB2F40}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API.ServiceInterface", "API\API.ServiceInterface\API.ServiceInterface.csproj", "{801A0F89-D5F6-49A6-BCEA-6624388C98A4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TmsWS.ServiceInterface", "API\API.ServiceInterface\TmsWS.ServiceInterface.csproj", "{801A0F89-D5F6-49A6-BCEA-6624388C98A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -12,10 +12,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Security.Cryptography;
 using System.Text;
-using API.ServiceInterface;
+using TmsWS.ServiceInterface;
 using System.Reflection;
 
-namespace API
+namespace TmsWS
 {
     public class AppHost : AppHostBase
     {
@@ -60,17 +60,17 @@ namespace API
             };
             container.Register<IDbConnectionFactory>(dbConnectionFactory);
 
-            var connectString = new API.ServiceModel.ConnectStringFactory(strConnectionString);
-            container.Register<API.ServiceModel.IConnectString>(connectString);
+            var connectString = new TmsWS.ServiceModel.ConnectStringFactory(strConnectionString);
+            container.Register<TmsWS.ServiceModel.IConnectString>(connectString);
 
-            var secretKey = new API.ServiceModel.SecretKeyFactory(strSecretKey);
-            container.Register<API.ServiceModel.ISecretKey>(secretKey);
+            var secretKey = new TmsWS.ServiceModel.SecretKeyFactory(strSecretKey);
+            container.Register<TmsWS.ServiceModel.ISecretKey>(secretKey);
 
-            container.RegisterAutoWired<API.ServiceModel.Auth>();
-            container.RegisterAutoWired<API.ServiceModel.Event.List_Login_Logic>();
-            container.RegisterAutoWired<API.ServiceModel.Event.List_JobNo_Logic>();
-            container.RegisterAutoWired<API.ServiceModel.Event.List_Container_Logic>();
-            container.RegisterAutoWired<API.ServiceModel.Event.Update_Done_Logic>();
+            container.RegisterAutoWired<TmsWS.ServiceModel.Auth>();
+            container.RegisterAutoWired<TmsWS.ServiceModel.Event.List_Login_Logic>();
+            container.RegisterAutoWired<TmsWS.ServiceModel.Event.List_JobNo_Logic>();
+            container.RegisterAutoWired<TmsWS.ServiceModel.Event.List_Container_Logic>();
+            container.RegisterAutoWired<TmsWS.ServiceModel.Event.Update_Done_Logic>();
         }
 
         //public class CustomUserSession : AuthUserSession

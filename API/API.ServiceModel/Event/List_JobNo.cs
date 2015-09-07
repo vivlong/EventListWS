@@ -8,7 +8,7 @@ using ServiceStack;
 using ServiceStack.Data;
 using ServiceStack.OrmLite;
 
-namespace API.ServiceModel.Event
+namespace TmsWS.ServiceModel.Event
 {
     [Route("/event/action/list/jobno/{PhoneNumber}", "Get")]
     public class List_JobNo : IReturn<CommonResponse>

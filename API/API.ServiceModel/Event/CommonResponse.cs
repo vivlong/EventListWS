@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace API.ServiceModel.Event
+namespace TmsWS.ServiceModel.Event
 {
     public class CommonResponse_meta_errors
     {

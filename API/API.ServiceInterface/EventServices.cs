@@ -4,12 +4,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using API.ServiceModel;
-using API.ServiceModel.Event;
-using API.ServiceInterface.Event;
+using TmsWS.ServiceModel;
+using TmsWS.ServiceModel.Event;
+using TmsWS.ServiceInterface.Event;
 using System.IO;
 
-namespace API.ServiceInterface
+namespace TmsWS.ServiceInterface
 {
     public class EventServices : Service
     {        

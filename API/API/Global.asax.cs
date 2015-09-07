@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace API
+namespace TmsWS
 {
     public class Global : System.Web.HttpApplication
     {

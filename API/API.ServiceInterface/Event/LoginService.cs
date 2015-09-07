@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using API.ServiceModel;
-using API.ServiceModel.Event;
+using TmsWS.ServiceModel;
+using TmsWS.ServiceModel.Event;
 
-namespace API.ServiceInterface.Event
+namespace TmsWS.ServiceInterface.Event
 {
     public class LoginService
     {
