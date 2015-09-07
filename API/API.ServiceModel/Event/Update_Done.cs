@@ -31,7 +31,6 @@ namespace API.ServiceModel.Event
             public string Remark { get; set; }
         }
         public IDbConnectionFactory DbConnectionFactory { get; set; }
-        public IConnectString ConnectString { get; set; }
         public int UpdateDone(Update_Done request) 
         {
             int Result = -1;

@@ -16,22 +16,28 @@ namespace API.ServiceModel.Event
     }
     public class List_Login_Logic
     {
+        private class Jmjm4
+        {
+            public string PhoneNumber { get; set; }
+        }
         public IDbConnectionFactory DbConnectionFactory { get; set; }
         public int LoginCheck(List_Login request) 
         {
             int Result = -1;
             try
             {
-                string com = "SELECT count(*) FROM jmjm4 WHERE PhoneNumber=" + Modfunction.SQLSafeValue(request.PhoneNumber) + "";
                 using (var db = DbConnectionFactory.OpenDbConnection())
                 {
-                    Result = db.Scalar<int>(com);
+                    Result = db.Scalar<int>(
+                        db.From<Jmjm4>()
+                        .Select(Sql.Count("*"))
+                        .Where(j4 => j4.PhoneNumber == request.PhoneNumber)
+                    );
                 }
             }
             catch { throw; }
             return Result;
         }
-
         public string GetUserInfo(List_Login request)
         {
             string Result = "";

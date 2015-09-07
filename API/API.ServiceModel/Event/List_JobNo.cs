@@ -15,7 +15,6 @@ namespace API.ServiceModel.Event
     {
         public string PhoneNumber { get; set; }
     }
-
     public class List_JobNo_Logic
     {
         private class Jmjm4
@@ -26,7 +25,6 @@ namespace API.ServiceModel.Event
             public string DoneFlag { get; set; }
         }
         public IDbConnectionFactory DbConnectionFactory { get; set; }
-        public IConnectString ConnectString { get; set; }
         public HashSet<string> GetList(List_JobNo request)
         {
             HashSet<string> Result = null;
@@ -44,7 +42,6 @@ namespace API.ServiceModel.Event
             catch { throw; }
             return Result;
         }
-
         public long GetCount(string strPhoneNumber, string strJobNo)
         {
             long Result = -1;
