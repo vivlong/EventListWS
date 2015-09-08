@@ -35,7 +35,7 @@ namespace TmsWS
                 //  { "Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS" },
                 //  { "Access-Control-Allow-Headers", "Content-Type, Signature" },
                 //},
-                EnableFeatures = Feature.All.Remove(Feature.Xml | Feature.Jsv | Feature.Csv | Feature.Soap11 | Feature.Soap12)
+                EnableFeatures = Feature.All.Remove(Feature.Xml | Feature.Jsv | Feature.Csv | Feature.Soap11 | Feature.Soap12 | Feature.Soap),
             });
             CorsFeature cf = new CorsFeature(allowedOrigins: "*", allowedMethods: "GET, POST, PUT, DELETE, OPTIONS", allowedHeaders: "Content-Type, Signature", allowCredentials: false);
             this.Plugins.Add(cf);
