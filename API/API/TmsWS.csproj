@@ -106,7 +106,6 @@
     <Content Include="bower_components\art-dialog\css\ui-dialog.css" />
     <Content Include="bower_components\art-dialog\dist\dialog-min.js" />
     <Content Include="bower_components\bootstrap\dist\css\bootstrap.min.css" />
-    <Content Include="bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="bower_components\bootstrap\dist\js\bootstrap.min.js" />
     <Content Include="bower_components\jquery\dist\jquery.min.js" />
     <Content Include="Default.aspx" />
@@ -114,10 +113,6 @@
     <Content Include="bower.json" />
     <Content Include="bower_components\jquery\dist\jquery.min.map" />
     <Content Include="bower_components\bootstrap\dist\css\bootstrap.css.map" />
-    <Content Include="bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.eot" />
     <None Include="Properties\PublishProfiles\API.pubxml" />
     <None Include="Properties\PublishProfiles\Debug.pubxml" />
     <None Include="Web.Debug.config">
