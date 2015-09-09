@@ -3885,7 +3885,6 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I2">ISIconIndex</col>
 		<row><td>ARPPRODUCTICON.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\setupicon.ico</td><td>0</td></row>
-		<row><td>UNINST_Uninstall_T_50B62EB7AB9A4314AA0B44033A458FF6.exe</td><td/><td>C:\Program Files (x86)\InstallShield\2015LE\Redist\Language Independent\OS Independent\uninstall.ico</td><td>0</td></row>
 	</table>
 
 	<table name="IniFile">
@@ -4018,7 +4017,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>ISTheme</td><td>InstallShield Blue.theme</td></row>
 		<row><td>ISUSLock</td><td>{1B4128CD-913E-4CF5-AC90-17C455AAAD2A}</td></row>
 		<row><td>ISUSSignature</td><td>{49280A2C-2A14-40BA-BD94-13DCDCD18ACC}</td></row>
-		<row><td>ISVisitedViews</td><td>viewAssistant,viewISToday,viewProject,viewRelease,viewAppFiles,viewShortcuts,viewUpgradePaths,viewVRoots,viewUpdateService,viewObjects,viewCustomActions,viewServices,viewEnvironmentVariables,viewFileExtensions,viewUI</td></row>
+		<row><td>ISVisitedViews</td><td>viewAssistant,viewISToday,viewProject,viewRelease,viewAppFiles,viewShortcuts,viewUpgradePaths,viewVRoots,viewUpdateService,viewObjects,viewCustomActions,viewServices,viewEnvironmentVariables,viewFileExtensions,viewUI,viewLearnMore</td></row>
 		<row><td>Limited</td><td>1</td></row>
 		<row><td>LockPermissionMode</td><td>1</td></row>
 		<row><td>MsiExecCmdLineOptions</td><td/></row>
@@ -4392,7 +4391,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKAPPPOOLS</td><td>##IDS_PROGMSG_IIS_ROLLBACKAPPPOOLS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKVROOTS</td><td>##IDS_PROGMSG_IIS_ROLLBACKVROOTS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
-		<row><td>ProductCode</td><td>{92049CE0-D235-4026-B956-7D8B1F6231BB}</td><td/></row>
+		<row><td>ProductCode</td><td>{66513B55-AB08-447E-8291-28BD58190834}</td><td/></row>
 		<row><td>ProductName</td><td>TmsWS</td><td/></row>
 		<row><td>ProductVersion</td><td>1.00.0000</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
@@ -4409,7 +4408,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>SecureCustomProperties</td><td>ISFOUNDNEWERPRODUCTVERSION;USERNAME;COMPANYNAME;ISX_SERIALNUM;SUPPORTDIR;DOTNETVERSION45FULL;IISROOTFOLDER</td><td/></row>
 		<row><td>SelectedSetupType</td><td>##IDS__DisplayName_Typical##</td><td/></row>
 		<row><td>SetupType</td><td>Typical</td><td/></row>
-		<row><td>UpgradeCode</td><td>{3D914365-F4FE-4502-B5ED-D3CA79E4B648}</td><td/></row>
+		<row><td>UpgradeCode</td><td>{D0333B3C-ACB3-4B8B-9D47-D50BA1958E60}</td><td/></row>
 		<row><td>_IsMaintenance</td><td>Change</td><td/></row>
 		<row><td>_IsSetupTypeMin</td><td>Typical</td><td/></row>
 	</table>
@@ -4471,7 +4470,6 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="L255">FileName</col>
 		<col def="s72">DirProperty</col>
 		<col def="i2">InstallMode</col>
-		<row><td>UNINST_Uninstall_TmsWS</td><td>IS_ININSTALL_SHORTCUT</td><td/><td>tmsws</td><td>2</td></row>
 	</table>
 
 	<table name="RemoveIniFile">
@@ -4557,7 +4555,6 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">ISComments</col>
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
-		<row><td>UNINST_Uninstall_TmsWS</td><td>tmsws</td><td>UNINST|Uninstall TmsWS</td><td>IS_ININSTALL_SHORTCUT</td><td>[SystemFolder]msiexec.exe</td><td>/x {B48D4009-D91A-454D-A443-45D116D55218}</td><td/><td/><td>UNINST_Uninstall_T_50B62EB7AB9A4314AA0B44033A458FF6.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="Signature">
