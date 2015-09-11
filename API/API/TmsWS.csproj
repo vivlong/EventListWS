@@ -35,6 +35,7 @@
     <DeployEncryptKey>加密密码仅在任何部署设置标记为安全时使用</DeployEncryptKey>
     <PublishDatabases>false</PublishDatabases>
     <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>BasicDesignGuidelineRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>

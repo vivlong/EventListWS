@@ -29,7 +29,7 @@ namespace TmsWS
         {
             SetConfig(new HostConfig
             {
-                //DebugMode = true,
+                DebugMode = false,
                 //GlobalResponseHeaders = {
                 //  { "Access-Control-Allow-Origin", "*" },
                 //  { "Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS" },
@@ -57,7 +57,6 @@ namespace TmsWS
                 ConnectionFilter =
                     x =>
                     new ProfiledDbConnection(x, Profiler.Current)
-
             };
             container.Register<IDbConnectionFactory>(dbConnectionFactory);
 
@@ -161,7 +160,7 @@ namespace TmsWS
         private static string DesDecrypt(string strValue)
         {
             string DesDecrypt = "";
-            if (strValue == "")
+            if (strValue.IsNullOrEmpty())
             {
                 return DesDecrypt;
             }
@@ -178,14 +177,16 @@ namespace TmsWS
                 }
                 desprovider.Key = DESKey;
                 desprovider.IV = DESIV;
-                MemoryStream ms = new MemoryStream();
-                CryptoStream cs = new CryptoStream(ms, desprovider.CreateDecryptor(), CryptoStreamMode.Write);
-                cs.Write(inputByteArray, 0, inputByteArray.Length);
-                cs.FlushFinalBlock();
-                DesDecrypt = Encoding.Default.GetString(ms.ToArray());
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    CryptoStream cs = new CryptoStream(ms, desprovider.CreateDecryptor(), CryptoStreamMode.Write);
+                    cs.Write(inputByteArray, 0, inputByteArray.Length);
+                    cs.FlushFinalBlock();
+                    DesDecrypt = Encoding.Default.GetString(ms.ToArray());
+                }
             }
             catch
-            { }
+            { throw; }
             return DesDecrypt;
         }
         #endregion
@@ -194,7 +195,7 @@ namespace TmsWS
             string IniConnection = "";
             string strAppSetting = "";
             string[] strDataBase = new string[3];
-            if (strAppSetting == "")
+            if (strAppSetting.IsNullOrEmpty())
             {
                 strAppSetting = System.Configuration.ConfigurationManager.AppSettings["DataBase"];
                 strSecretKey = System.Configuration.ConfigurationManager.AppSettings["SecretKey"];
