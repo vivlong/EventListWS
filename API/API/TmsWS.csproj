@@ -104,16 +104,17 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bower_components\art-dialog\css\ui-dialog.css" />
-    <Content Include="bower_components\art-dialog\dist\dialog-min.js" />
-    <Content Include="bower_components\bootstrap\dist\css\bootstrap.min.css" />
-    <Content Include="bower_components\bootstrap\dist\js\bootstrap.min.js" />
-    <Content Include="bower_components\jquery\dist\jquery.min.js" />
     <Content Include="Default.aspx" />
+    <Content Include="gulpfile.js" />
+    <Content Include="libs\css\bootstrap.min.css" />
+    <Content Include="libs\css\ui-dialog.css" />
+    <Content Include="libs\js\bootstrap.min.js" />
+    <Content Include="libs\js\dialog-min.js" />
+    <Content Include="libs\js\jquery.min.js" />
     <Content Include="packages.config" />
     <Content Include="bower.json" />
-    <Content Include="bower_components\jquery\dist\jquery.min.map" />
-    <Content Include="bower_components\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="libs\css\bootstrap.css.map" />
+    <Content Include="libs\js\jquery.min.map" />
     <None Include="Properties\PublishProfiles\API.pubxml" />
     <None Include="Properties\PublishProfiles\Debug.pubxml" />
     <None Include="Web.Debug.config">

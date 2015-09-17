@@ -15,26 +15,45 @@ namespace ConfigIIS
     /// </summary>
     public class IISControlHelper
     {
-        public static bool ExistWebSite(string webSiteName)
+        public static bool ExistApplication(string applicationName)
         {
             ServerManager iisManager = new ServerManager();
-            Site site = iisManager.Sites[webSiteName];
-            return site != null;
+            foreach (Application a in iisManager.Sites[0].Applications)
+            {
+                if (a.Path.Equals(applicationName))
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
-        public static void CreateApplication(string folderPath, string applicationPoolName)
+        public static void CreateApplication(string applicationPath, string folderPath, string applicationPoolName)
         {
             ServerManager iisManager = new ServerManager();
-            iisManager.Sites[0].Applications.Add("/TmsWS",folderPath);
-            iisManager.Sites[0].Applications["/TmsWS"].ApplicationPoolName = applicationPoolName;
+            iisManager.Sites[0].Applications.Add(applicationPath, folderPath);
+            iisManager.Sites[0].Applications[applicationPath].ApplicationPoolName = applicationPoolName;
             iisManager.CommitChanges();
         }
 
-        public static void DeleteApplication()
+        public static void DeleteApplication(string applicationPath)
         {
             ServerManager iisManager = new ServerManager();
-            iisManager.Sites[0].Applications.Remove(iisManager.Sites[0].Applications["/TmsWS"]);
+            iisManager.Sites[0].Applications.Remove(iisManager.Sites[0].Applications[applicationPath]);
             iisManager.CommitChanges();
+        }
+
+        public static bool ExistApplicationPool(string appPoolName)
+        {
+            ServerManager iisManager = new ServerManager();
+            foreach (ApplicationPool ap in iisManager.ApplicationPools)
+            {
+                if (ap.Name.Equals(appPoolName))
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         public static void CreateApplicationPool(string appPoolName)
@@ -48,7 +67,7 @@ namespace ConfigIIS
             iisManager.CommitChanges();            
         }
 
-        public static void DeleteApplicationPool(String poolName)
+        public static void DeleteApplicationPool(string poolName)
         {
             ServerManager iisManager = new ServerManager();
             ApplicationPool appPool = iisManager.ApplicationPools[poolName];
