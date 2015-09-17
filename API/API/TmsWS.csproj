@@ -115,6 +115,7 @@
     <Content Include="bower.json" />
     <Content Include="libs\css\bootstrap.css.map" />
     <Content Include="libs\js\jquery.min.map" />
+    <Content Include="package.json" />
     <None Include="Properties\PublishProfiles\API.pubxml" />
     <None Include="Properties\PublishProfiles\Debug.pubxml" />
     <None Include="Web.Debug.config">
