@@ -29,13 +29,13 @@
 	</ItemGroup>
 	<Import Project="$(MSBuildExtensionsPath32)\InstallShield\2015Limited\InstallShield.targets"/>
 	<ItemGroup>
+		<ProjectReference Include="..\ConfigIIS\ConfigIIS.csproj">
+			<Name>ConfigIIS</Name>
+			<Project>{E53DF677-E930-4B14-B739-D17F2450C9B2}</Project>
+		</ProjectReference>
 		<ProjectReference Include="..\API\API\TmsWS.csproj">
 			<Name>TmsWS</Name>
 			<Project>{4389B305-B381-4B50-B1A8-BBB5259A0524}</Project>
-		</ProjectReference>
-		<ProjectReference Include="..\ConfigIIS\TmsWS.ConfigIIS.csproj">
-			<Name>TmsWS.ConfigIIS</Name>
-			<Project>{E53DF677-E930-4B14-B739-D17F2450C9B2}</Project>
 		</ProjectReference>
 		<ProjectReference Include="..\API\API.ServiceInterface\TmsWS.ServiceInterface.csproj">
 			<Name>TmsWS.ServiceInterface</Name>
