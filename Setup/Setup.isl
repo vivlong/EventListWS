@@ -345,7 +345,7 @@
 		<row><td>Component1</td><td>{0BBD3134-27FE-48A0-B374-04D2B7620902}</td><td>BIN</td><td>2</td><td/><td>File1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>Component2</td><td>{D2A6B13B-7B5C-4310-8C0A-61D268CE6599}</td><td>BIN</td><td>2</td><td/><td>File2</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>Component3</td><td>{1AEC55A2-4431-45E0-82B6-06BE230BD165}</td><td>INSTALLDIR</td><td>2</td><td/><td>File3</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Component5</td><td>{B6952D54-DF2F-4D3D-9FA5-70182700D314}</td><td>INSTALLDIR</td><td>2</td><td/><td>File5</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Component4</td><td>{67E75A35-25DC-4287-AEEE-316FBE811580}</td><td>INSTALLDIR</td><td>2</td><td/><td>File4</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{FC156DC8-3C1D-4155-862C-BDF658FB8297}</td><td>BIN</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT1</td><td>{4ABC9A2C-D7CC-45F4-8648-F02CEF86BD2F}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>IS_ININSTALL_SHORTCUT</td><td>{95FA8CE9-7272-4CE5-A44C-45D38601AB5B}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
@@ -1068,7 +1068,7 @@
 		<row><td>INSTALLDIR</td><td>Component1</td></row>
 		<row><td>INSTALLDIR</td><td>Component2</td></row>
 		<row><td>INSTALLDIR</td><td>Component3</td></row>
-		<row><td>INSTALLDIR</td><td>Component5</td></row>
+		<row><td>INSTALLDIR</td><td>Component4</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT1</td></row>
 		<row><td>INSTALLDIR</td><td>IS_ININSTALL_SHORTCUT</td></row>
@@ -1893,7 +1893,7 @@
 		<row><td>AlwaysInstall</td><td>Component1</td></row>
 		<row><td>AlwaysInstall</td><td>Component2</td></row>
 		<row><td>AlwaysInstall</td><td>Component3</td></row>
-		<row><td>AlwaysInstall</td><td>Component5</td></row>
+		<row><td>AlwaysInstall</td><td>Component4</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT1</td></row>
 		<row><td>AlwaysInstall</td><td>IS_ININSTALL_SHORTCUT</td></row>
@@ -1916,7 +1916,7 @@
 		<row><td>File1</td><td>Component1</td><td>TmsWS.ServiceModel.主输出</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;TmsWS.ServiceModel&gt;|Built</td><td>3</td><td/></row>
 		<row><td>File2</td><td>Component2</td><td>TmsWS.ServiceInterface.主输出</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;TmsWS.ServiceInterface&gt;|Built</td><td>3</td><td/></row>
 		<row><td>File3</td><td>Component3</td><td>TmsWS.内容文件</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;TmsWS&gt;|ContentFiles</td><td>3</td><td/></row>
-		<row><td>File5</td><td>Component5</td><td>TmsWS.ConfigIIS.主输出</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;TmsWS.ConfigIIS&gt;|Built</td><td>3</td><td/></row>
+		<row><td>File4</td><td>Component4</td><td>ConfigIIS.主输出</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConfigIIS&gt;|Built</td><td>3</td><td/></row>
 	</table>
 
 	<table name="FileSFPCatalog">
@@ -2064,7 +2064,7 @@
 		<row><td>Component1</td><td/><td/><td>_3D3E5B7B_9040_497F_9AE1_716F35589BD9_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>Component2</td><td/><td/><td>_FE0B4097_B64F_4E86_BC1B_C20EF1C1DE13_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>Component3</td><td/><td/><td>_DAFACE8B_17B8_4AE9_9C5E_C3D2ED2753A8_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Component5</td><td/><td/><td>_BA7F1EAC_85BA_43E7_A46E_FC39DCD6F03C_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Component4</td><td/><td/><td>_AFA6EC06_EF68_4ED2_BD4F_7E543F525E0A_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_65F2E409_CFDE_413A_81E3_33F7899FBF20_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT1</td><td/><td/><td>_6E49CA5F_5585_4307_AF10_632621B34F9A_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>IS_ININSTALL_SHORTCUT</td><td/><td/><td>_D5B9E498_9962_4F84_B6CC_0A14029D2580_FILTER</td><td/><td/><td/><td/></row>
@@ -2347,6 +2347,7 @@
 		<col def="S255">TestValue</col>
 		<col def="i4">Type</col>
 		<row><td>CommonFilesFolder</td><td/><td/><td>1</td></row>
+		<row><td>ConfigIIS</td><td>ConfigIIS\ConfigIIS.csproj</td><td/><td>2</td></row>
 		<row><td>ISPROJECTDIR</td><td/><td/><td>1</td></row>
 		<row><td>ISProductFolder</td><td/><td/><td>1</td></row>
 		<row><td>ISProjectDataFolder</td><td/><td/><td>1</td></row>
@@ -4031,6 +4032,9 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>SccPath</td><td/></row>
 		<row><td>SchemaVersion</td><td>776</td></row>
 		<row><td>Type</td><td>MSIE</td></row>
+		<row><td>VSSccAuxPath</td><td/></row>
+		<row><td>VSSccLocalPath</td><td/></row>
+		<row><td>VSSccProvider</td><td/></row>
 	</table>
 
 	<table name="InstallUISequence">

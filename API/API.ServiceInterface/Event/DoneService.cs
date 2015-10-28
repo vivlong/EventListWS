@@ -16,6 +16,7 @@ namespace TmsWS.ServiceInterface.Event
             {
                 if (eventdoneLogic.UpdateDone(request) > 0)
                 {
+                    eventdoneLogic.InsertContainerNo(request);
                     ecr.meta.code = 200;
                     ecr.meta.message = "OK";
                 }
