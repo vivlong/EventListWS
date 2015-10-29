@@ -30,6 +30,7 @@ namespace TmsWS.ServiceModel.Event
             public int JobLineItemNo { get; set; }
             public int LineItemNo { get; set; }
             public string Remark { get; set; }
+            public string ContainerNo { get; set; }
         }
         private class Jmjm6
         {
@@ -45,7 +46,7 @@ namespace TmsWS.ServiceModel.Event
             {
                 using (var db = DbConnectionFactory.OpenDbConnection())
                 {
-                    Result = db.Update<Jmjm4>(new { DoneDateTime = request.DoneDateTime, DoneFlag = request.DoneFlag, Remark = request.Remark }, p => p.JobNo == request.JobNo && p.JobLineItemNo == request.JobLineItemNo && p.LineItemNo == request.LineItemNo);
+                    Result = db.Update<Jmjm4>(new { DoneDateTime = request.DoneDateTime, DoneFlag = request.DoneFlag, Remark = request.Remark, ContainerNo = request.ContainerNo }, p => p.JobNo == request.JobNo && p.JobLineItemNo == request.JobLineItemNo && p.LineItemNo == request.LineItemNo);
                 }
             }
             catch { throw; } 

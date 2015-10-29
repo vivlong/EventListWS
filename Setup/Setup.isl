@@ -341,11 +341,11 @@
 		<col def="S0">ISDotNetInstallerArgsCommit</col>
 		<col def="S0">ISDotNetInstallerArgsUninstall</col>
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
-		<row><td>Component</td><td>{1396B6D2-8BD2-4D95-A463-4C576303252D}</td><td>BIN</td><td>2</td><td/><td>File</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>Component1</td><td>{0BBD3134-27FE-48A0-B374-04D2B7620902}</td><td>BIN</td><td>2</td><td/><td>File1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>Component2</td><td>{D2A6B13B-7B5C-4310-8C0A-61D268CE6599}</td><td>BIN</td><td>2</td><td/><td>File2</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Component3</td><td>{1AEC55A2-4431-45E0-82B6-06BE230BD165}</td><td>INSTALLDIR</td><td>2</td><td/><td>File3</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Component4</td><td>{67E75A35-25DC-4287-AEEE-316FBE811580}</td><td>INSTALLDIR</td><td>2</td><td/><td>File4</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Component3</td><td>{A703EC2C-B4E3-4D4B-8A8D-C2A3C7C690EE}</td><td>BIN</td><td>2</td><td/><td>File3</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Component4</td><td>{07B65EE9-7797-4F93-B79E-E325D223362E}</td><td>INSTALLDIR</td><td>2</td><td/><td>File4</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Component5</td><td>{C6DDB0A1-18C9-44D0-8889-E00E8750BACF}</td><td>INSTALLDIR</td><td>2</td><td/><td>File5</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{FC156DC8-3C1D-4155-862C-BDF658FB8297}</td><td>BIN</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT1</td><td>{4ABC9A2C-D7CC-45F4-8648-F02CEF86BD2F}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>IS_ININSTALL_SHORTCUT</td><td>{95FA8CE9-7272-4CE5-A44C-45D38601AB5B}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
@@ -1060,15 +1060,15 @@
 	<table name="CreateFolder">
 		<col key="yes" def="s72">Directory_</col>
 		<col key="yes" def="s72">Component_</col>
-		<row><td>BIN</td><td>Component</td></row>
 		<row><td>BIN</td><td>Component1</td></row>
 		<row><td>BIN</td><td>Component2</td></row>
+		<row><td>BIN</td><td>Component3</td></row>
 		<row><td>BIN</td><td>ISX_DEFAULTCOMPONENT</td></row>
-		<row><td>INSTALLDIR</td><td>Component</td></row>
 		<row><td>INSTALLDIR</td><td>Component1</td></row>
 		<row><td>INSTALLDIR</td><td>Component2</td></row>
 		<row><td>INSTALLDIR</td><td>Component3</td></row>
 		<row><td>INSTALLDIR</td><td>Component4</td></row>
+		<row><td>INSTALLDIR</td><td>Component5</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT1</td></row>
 		<row><td>INSTALLDIR</td><td>IS_ININSTALL_SHORTCUT</td></row>
@@ -1082,7 +1082,7 @@
 		<col def="S0">Target</col>
 		<col def="I4">ExtendedType</col>
 		<col def="S255">ISComments</col>
-		<row><td>CreateIISApplication</td><td>18</td><td>File5</td><td/><td/><td/></row>
+		<row><td>CreateIISApplication</td><td>18</td><td>File4</td><td/><td/><td/></row>
 		<row><td>ISPreventDowngrade</td><td>19</td><td/><td>[IS_PREVENT_DOWNGRADE_EXIT]</td><td/><td>Exits install when a newer version of this product is found</td></row>
 		<row><td>ISPrint</td><td>1</td><td>SetAllUsers.dll</td><td>PrintScrollableText</td><td/><td>Prints the contents of a ScrollableText control on a dialog.</td></row>
 		<row><td>ISRunSetupTypeAddLocalEvent</td><td>1</td><td>ISExpHlp.dll</td><td>RunSetupTypeAddLocalEvent</td><td/><td>Run the AddLocal events associated with the Next button on the Setup Type dialog.</td></row>
@@ -1889,11 +1889,11 @@
 	<table name="FeatureComponents">
 		<col key="yes" def="s38">Feature_</col>
 		<col key="yes" def="s72">Component_</col>
-		<row><td>AlwaysInstall</td><td>Component</td></row>
 		<row><td>AlwaysInstall</td><td>Component1</td></row>
 		<row><td>AlwaysInstall</td><td>Component2</td></row>
 		<row><td>AlwaysInstall</td><td>Component3</td></row>
 		<row><td>AlwaysInstall</td><td>Component4</td></row>
+		<row><td>AlwaysInstall</td><td>Component5</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT1</td></row>
 		<row><td>AlwaysInstall</td><td>IS_ININSTALL_SHORTCUT</td></row>
@@ -1912,11 +1912,11 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I4">ISAttributes</col>
 		<col def="S72">ISComponentSubFolder_</col>
-		<row><td>File</td><td>Component</td><td>TmsWS.主输出</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;TmsWS&gt;|Built</td><td>3</td><td/></row>
 		<row><td>File1</td><td>Component1</td><td>TmsWS.ServiceModel.主输出</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;TmsWS.ServiceModel&gt;|Built</td><td>3</td><td/></row>
 		<row><td>File2</td><td>Component2</td><td>TmsWS.ServiceInterface.主输出</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;TmsWS.ServiceInterface&gt;|Built</td><td>3</td><td/></row>
-		<row><td>File3</td><td>Component3</td><td>TmsWS.内容文件</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;TmsWS&gt;|ContentFiles</td><td>3</td><td/></row>
+		<row><td>File3</td><td>Component3</td><td>TmsWS.主输出</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;TmsWS&gt;|Built</td><td>3</td><td/></row>
 		<row><td>File4</td><td>Component4</td><td>ConfigIIS.主输出</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ConfigIIS&gt;|Built</td><td>3</td><td/></row>
+		<row><td>File5</td><td>Component5</td><td>TmsWS.内容文件</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;TmsWS&gt;|ContentFiles</td><td>3</td><td/></row>
 	</table>
 
 	<table name="FileSFPCatalog">
@@ -2060,11 +2060,11 @@
 		<col def="S0">FTPLocation</col>
 		<col def="S0">HTTPLocation</col>
 		<col def="S0">Miscellaneous</col>
-		<row><td>Component</td><td/><td/><td>_2D327520_A630_4C45_8934_22862C33050A_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>Component1</td><td/><td/><td>_3D3E5B7B_9040_497F_9AE1_716F35589BD9_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>Component2</td><td/><td/><td>_FE0B4097_B64F_4E86_BC1B_C20EF1C1DE13_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Component3</td><td/><td/><td>_DAFACE8B_17B8_4AE9_9C5E_C3D2ED2753A8_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Component4</td><td/><td/><td>_AFA6EC06_EF68_4ED2_BD4F_7E543F525E0A_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Component3</td><td/><td/><td>_FD6714A9_A22F_44B3_ABAC_B662F6079628_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Component4</td><td/><td/><td>_13271C12_E771_404E_AA69_28BFA4294DC4_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Component5</td><td/><td/><td>_80716FFE_36C6_4EF3_A36E_404DD3BF3CD2_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_65F2E409_CFDE_413A_81E3_33F7899FBF20_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT1</td><td/><td/><td>_6E49CA5F_5585_4307_AF10_632621B34F9A_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>IS_ININSTALL_SHORTCUT</td><td/><td/><td>_D5B9E498_9962_4F84_B6CC_0A14029D2580_FILTER</td><td/><td/><td/><td/></row>
@@ -4000,8 +4000,8 @@
 		<col def="S0">Value</col>
 		<row><td>ActiveLanguage</td><td>1033</td></row>
 		<row><td>Comments</td><td/></row>
-		<row><td>CurrentMedia</td><td dt:dt="bin.base64" md5="de9f554a3bc05c12be9c31b998217995">
-UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
+		<row><td>CurrentMedia</td><td dt:dt="bin.base64" md5="a4f66fafb30885f14d732b73e196bba0">
+RABWAEQALQA1AAEARQB4AHAAcgBlAHMAcwA=
 			</td></row>
 		<row><td>DefaultProductConfiguration</td><td>Express</td></row>
 		<row><td>EnableSwidtag</td><td>1</td></row>
@@ -4018,7 +4018,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>ISTheme</td><td>InstallShield Blue.theme</td></row>
 		<row><td>ISUSLock</td><td>{1B4128CD-913E-4CF5-AC90-17C455AAAD2A}</td></row>
 		<row><td>ISUSSignature</td><td>{49280A2C-2A14-40BA-BD94-13DCDCD18ACC}</td></row>
-		<row><td>ISVisitedViews</td><td>viewAssistant,viewISToday,viewProject,viewRelease,viewAppFiles,viewShortcuts,viewUpgradePaths,viewVRoots,viewUpdateService,viewObjects,viewCustomActions,viewServices,viewEnvironmentVariables,viewFileExtensions,viewUI,viewLearnMore</td></row>
+		<row><td>ISVisitedViews</td><td>viewAssistant,viewISToday,viewProject,viewRelease,viewAppFiles,viewShortcuts,viewUpgradePaths,viewVRoots,viewUpdateService,viewObjects,viewCustomActions,viewServices,viewEnvironmentVariables,viewFileExtensions,viewUI,viewLearnMore,viewSystemSearch</td></row>
 		<row><td>Limited</td><td>1</td></row>
 		<row><td>LockPermissionMode</td><td>1</td></row>
 		<row><td>MsiExecCmdLineOptions</td><td/></row>
@@ -4397,7 +4397,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
 		<row><td>ProductCode</td><td>{66513B55-AB08-447E-8291-28BD58190834}</td><td/></row>
 		<row><td>ProductName</td><td>TmsWS</td><td/></row>
-		<row><td>ProductVersion</td><td>1.00.0000</td><td/></row>
+		<row><td>ProductVersion</td><td>1.0.2.8</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>

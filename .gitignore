@@ -187,10 +187,7 @@ FakesAssemblies/
 GeneratedArtifacts/
 _Pvt_Extensions/
 ModelManifest.xml
-.bin
-TmsWS.Setup
-bower_components
-bower_components
-packages
 .nuget
-Setup
+packages/
+API/API/.bin/
+API/API/bower_components/
