@@ -189,5 +189,5 @@ _Pvt_Extensions/
 ModelManifest.xml
 .nuget
 packages/
-API/API/.bin/
-API/API/bower_components/
+.bin
+bower_components
