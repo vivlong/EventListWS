@@ -70,7 +70,10 @@ namespace TmsWS
             container.RegisterAutoWired<TmsWS.ServiceModel.Event.List_Login_Logic>();
             container.RegisterAutoWired<TmsWS.ServiceModel.Event.List_JobNo_Logic>();
             container.RegisterAutoWired<TmsWS.ServiceModel.Event.List_Container_Logic>();
+            container.RegisterAutoWired<TmsWS.ServiceModel.Event.List_Jmjm6_Logic>();
             container.RegisterAutoWired<TmsWS.ServiceModel.Event.Update_Done_Logic>();
+
+            OrmLiteConfig.OnDbNullFilter = fieldDef => fieldDef.FieldType == typeof(DateTime) ? "" : null;
         }
 
         //public class CustomUserSession : AuthUserSession

@@ -76,6 +76,7 @@
     <Compile Include="Auth.cs" />
     <Compile Include="ConfigInterface.cs" />
     <Compile Include="Event\CommonResponse.cs" />
+    <Compile Include="Event\List_Jmjm6.cs" />
     <Compile Include="Event\Update_Done.cs" />
     <Compile Include="Event\List_Container.cs" />
     <Compile Include="Event\List_Login.cs" />
