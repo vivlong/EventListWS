@@ -24,7 +24,11 @@ namespace TmsWS.ServiceModel.Event
         public string JobType { get; set; }
         public string VehicleNo { get; set; }
         public string DriverNo { get; set; }
+        public string CargoStatusCode { get; set; }
         public DateTime TruckDateTime { get; set; }
+        public DateTime RecevieDateTime { get; set; }
+        public DateTime ReadyDateTime { get; set; }
+        public DateTime UnLoadDateTime { get; set; }
     }
     public class List_Jmjm6_Logic
     {
@@ -39,9 +43,14 @@ namespace TmsWS.ServiceModel.Event
             public string JobNo { get; set; }
             public int LineItemNo { get; set; }
             public string ContainerNo { get; set; }
+            public string Remark { get; set; }
             public string VehicleNo { get; set; }
             public string DriverNo { get; set; }
+            public string CargoStatusCode { get; set; }
             public DateTime TruckDateTime { get; set; }
+            public DateTime RecevieDateTime { get; set; }
+            public DateTime ReadyDateTime { get; set; }
+            public DateTime UnLoadDateTime { get; set; }
         }
         public IDbConnectionFactory DbConnectionFactory { get; set; }
         public List<List_Jmjm6_Response> GetList(List_Jmjm6 request)

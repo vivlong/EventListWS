@@ -73,7 +73,7 @@ namespace TmsWS
             container.RegisterAutoWired<TmsWS.ServiceModel.Event.List_Jmjm6_Logic>();
             container.RegisterAutoWired<TmsWS.ServiceModel.Event.Update_Done_Logic>();
 
-            OrmLiteConfig.OnDbNullFilter = fieldDef => fieldDef.FieldType == typeof(DateTime) ? "" : null;
+            //OrmLiteConfig.OnDbNullFilter = fieldDef => fieldDef.FieldType == typeof(DateTime) ? "" : null;
         }
 
         //public class CustomUserSession : AuthUserSession
