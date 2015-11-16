@@ -8,6 +8,7 @@ using TmsWS.ServiceModel;
 using TmsWS.ServiceModel.Event;
 using TmsWS.ServiceInterface.Event;
 using System.IO;
+using ServiceStack.ServiceInterface;
 
 namespace TmsWS.ServiceInterface
 {

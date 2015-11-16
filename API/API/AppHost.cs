@@ -1,12 +1,10 @@
 ﻿using Funq;
 using ServiceStack;
-using ServiceStack.Auth;
-using ServiceStack.Caching;
 using ServiceStack.Configuration;
-using ServiceStack.Data;
 using ServiceStack.MiniProfiler;
 using ServiceStack.MiniProfiler.Data;
 using ServiceStack.OrmLite;
+using ServiceStack.ServiceInterface.Cors;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -14,6 +12,9 @@ using System.Security.Cryptography;
 using System.Text;
 using TmsWS.ServiceInterface;
 using System.Reflection;
+using ServiceStack.WebHost.Endpoints;
+using ServiceStack.ServiceHost;
+using ServiceStack.Common.Web;
 
 namespace TmsWS
 {
@@ -27,33 +28,22 @@ namespace TmsWS
         }
         public override void Configure(Container container)
         {
-            SetConfig(new HostConfig
+            ServiceStack.Text.JsConfig.EmitCamelCaseNames = true;
+            //Feature disableFeatures = Feature.Xml | Feature.Jsv | Feature.Csv | Feature.Soap11 | Feature.Soap12 | Feature.Soap;
+            SetConfig(new EndpointHostConfig
             {
                 DebugMode = false,
-                //GlobalResponseHeaders = {
-                //  { "Access-Control-Allow-Origin", "*" },
-                //  { "Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS" },
-                //  { "Access-Control-Allow-Headers", "Content-Type, Signature" },
-                //},
-                EnableFeatures = Feature.All.Remove(Feature.Xml | Feature.Jsv | Feature.Csv | Feature.Soap11 | Feature.Soap12 | Feature.Soap),
-                HandlerFactoryPath = "api"
+                UseCustomMetadataTemplates = true,
+                DefaultContentType = ContentType.Json,
+                EnableFeatures = Feature.Json | Feature.Metadata | Feature.Html | Feature.CustomFormat | Feature.RequestInfo
+                //ServiceStackHandlerFactoryPath  = "api"                
             });
             CorsFeature cf = new CorsFeature(allowedOrigins: "*", allowedMethods: "GET, POST, PUT, DELETE, OPTIONS", allowedHeaders: "Content-Type, Signature", allowCredentials: false);
             this.Plugins.Add(cf);
-
-            //this.Plugins.Add(new AuthFeature(
-            //    () => new CustomUserSession(), new IAuthProvider[] { new BasicAuthProvider(), new CredentialsAuthProvider(), }
-            //    ));
-            //this.Plugins.Add(new AuthFeature(
-            //    () => new CustomUserSession(), new[] { new CustomCredentialsAuthProvider() }
-            //    ));
-            //container.Register<ICacheClient>(new MemoryCacheClient());
-            //var userRepository = new InMemoryAuthRepository();
-            //container.Register<IUserAuthRepository>(userRepository);
-
+            
             string strConnectionString = GetConnectionString();
-            var dbConnectionFactory = new OrmLiteConnectionFactory(strConnectionString, SqlServerDialect.Provider, true)
-            {                
+            var dbConnectionFactory = new OrmLiteConnectionFactory(strConnectionString, SqlServerDialect.Provider)
+            {
                 ConnectionFilter =
                     x =>
                     new ProfiledDbConnection(x, Profiler.Current)
@@ -62,7 +52,6 @@ namespace TmsWS
 
             var connectString = new TmsWS.ServiceModel.ConnectStringFactory(strConnectionString);
             container.Register<TmsWS.ServiceModel.IConnectString>(connectString);
-
             var secretKey = new TmsWS.ServiceModel.SecretKeyFactory(strSecretKey);
             container.Register<TmsWS.ServiceModel.ISecretKey>(secretKey);
 
@@ -72,8 +61,6 @@ namespace TmsWS
             container.RegisterAutoWired<TmsWS.ServiceModel.Event.List_Container_Logic>();
             container.RegisterAutoWired<TmsWS.ServiceModel.Event.List_Jmjm6_Logic>();
             container.RegisterAutoWired<TmsWS.ServiceModel.Event.Update_Done_Logic>();
-
-            //OrmLiteConfig.OnDbNullFilter = fieldDef => fieldDef.FieldType == typeof(DateTime) ? "" : null;
         }
 
         //public class CustomUserSession : AuthUserSession
@@ -163,7 +150,7 @@ namespace TmsWS
         private static string DesDecrypt(string strValue)
         {
             string DesDecrypt = "";
-            if (strValue.IsNullOrEmpty())
+            if (string.IsNullOrEmpty(strValue))
             {
                 return DesDecrypt;
             }
@@ -198,7 +185,7 @@ namespace TmsWS
             string IniConnection = "";
             string strAppSetting = "";
             string[] strDataBase = new string[3];
-            if (strAppSetting.IsNullOrEmpty())
+            if (string.IsNullOrEmpty(strAppSetting))
             {
                 strAppSetting = System.Configuration.ConfigurationManager.AppSettings["DataBase"];
                 strSecretKey = System.Configuration.ConfigurationManager.AppSettings["SecretKey"];

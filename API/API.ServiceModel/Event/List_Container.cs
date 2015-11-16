@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using ServiceStack;
-using ServiceStack.Data;
+using ServiceStack.ServiceHost;
 using ServiceStack.OrmLite;
 
 namespace TmsWS.ServiceModel.Event
@@ -62,10 +62,10 @@ namespace TmsWS.ServiceModel.Event
                 using (var db = DbConnectionFactory.OpenDbConnection())
                 {
                     Result = db.Select<List_Container_Response>(
-                        db.From<Jmjm4>()
-                        .LeftJoin<Jmjm4, Jmjm3>((j4, j3) => j4.JobNo == j3.JobNo && j4.JobLineItemNo == j3.LineItemNo)
-                        .LeftJoin<Jmjm3, Jmje1>((j3, j1) => j1.EventCode == j3.EventCode)
-                        .Where(j4 => j4.PhoneNumber == request.PhoneNumber && j4.JobNo == request.JobNo && (j4.DoneFlag != "Y" || j4.DoneFlag == null))
+                        "Select * From Jmjm4 Left Join Jmjm3 On Jmjm4.JobNo=Jmjm3.JobNo And Jmjm4.JobLineItemNo=Jmjm3.LineItemNo " +
+                        "Left Join Jmje1 On Jmjm3.EventCode=Jmje1.EventCode " +
+                        "Where Jmjm4.PhoneNumber={0} And Jmjm4.JobNo={1} And IsNull(Jmjm4.DoneFlag,'')<>'Y'"
+                        , request.PhoneNumber, request.JobNo
                     );
                 }
             }

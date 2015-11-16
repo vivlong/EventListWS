@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using ServiceStack;
-using ServiceStack.Data;
+using ServiceStack.ServiceHost;
 using ServiceStack.OrmLite;
 
 namespace TmsWS.ServiceModel.Event
@@ -31,11 +31,9 @@ namespace TmsWS.ServiceModel.Event
             try
             {
                 using (var db = DbConnectionFactory.OpenDbConnection())
-                {                    
-                    Result = db.ColumnDistinct<string>(
-                        db.From<Jmjm4>()
-                        .Select(j4 => j4.JobNo)
-                        .Where(j4 => j4.PhoneNumber == request.PhoneNumber && (j4.DoneFlag != "Y" || j4.DoneFlag == null))
+                {
+                    Result = db.HashSet<string>(
+                        "Select Distinct JobNo From Jmjm4 Where IsNull(Jmjm4.DoneFlag,'')<>'Y' And Jmjm4.PhoneNumber={0}",request.PhoneNumber
                     );
                 }
             }
