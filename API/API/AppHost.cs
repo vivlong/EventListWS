@@ -35,10 +35,10 @@ namespace TmsWS
                 DebugMode = false,
                 UseCustomMetadataTemplates = true,
                 DefaultContentType = ContentType.Json,
-                EnableFeatures = Feature.Json | Feature.Metadata | Feature.Html | Feature.CustomFormat | Feature.RequestInfo
+                EnableFeatures = Feature.Json | Feature.Metadata
                 //ServiceStackHandlerFactoryPath  = "api"                
             });
-            CorsFeature cf = new CorsFeature(allowedOrigins: "*", allowedMethods: "GET, POST, PUT, DELETE, OPTIONS", allowedHeaders: "Content-Type, Signature", allowCredentials: false);
+            CorsFeature cf = new CorsFeature(allowedOrigins: "*", allowedMethods: "GET, POST, PUT, DELETE", allowedHeaders: "Content-Type, Signature", allowCredentials: false);
             this.Plugins.Add(cf);
             
             string strConnectionString = GetConnectionString();

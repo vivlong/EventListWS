@@ -60,7 +60,7 @@ namespace TmsWS.ServiceModel.Event
             {
                 using (var db = DbConnectionFactory.OpenDbConnection())
                 {
-                    Result = db.Single<string>("Select Top 1 ISNULL(DriverName,'') From Jmjm4 Where PhoneNumber=" + Modfunction.SQLSafeValue(request.PhoneNumber) + "");
+                    Result = db.QuerySingle<string>("Select Top 1 ISNULL(DriverName,'') From Jmjm4 Where PhoneNumber=" + Modfunction.SQLSafeValue(request.PhoneNumber));
                 }
             }
             catch { throw; }
