@@ -28,7 +28,7 @@ namespace TmsWS
         }
         public override void Configure(Container container)
         {
-            ServiceStack.Text.JsConfig.EmitCamelCaseNames = true;
+            //ServiceStack.Text.JsConfig.EmitCamelCaseNames = true; ! DO NOT USE THIS !
             //Feature disableFeatures = Feature.Xml | Feature.Jsv | Feature.Csv | Feature.Soap11 | Feature.Soap12 | Feature.Soap;
             SetConfig(new EndpointHostConfig
             {
