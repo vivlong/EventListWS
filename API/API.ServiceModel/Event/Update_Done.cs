@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ServiceStack;
-using ServiceStack.Data;
+using ServiceStack.ServiceHost;
 using ServiceStack.OrmLite;
 
 namespace TmsWS.ServiceModel.Event
@@ -57,24 +57,22 @@ namespace TmsWS.ServiceModel.Event
             long Result = -1;
             try
             {
-                if (request.ContainerNo.IsNullOrEmpty() || request.ContainerNo.Length < 1) {
+                if (string.IsNullOrEmpty(request.ContainerNo) || request.ContainerNo.Length < 1)
+                {
                     return Result;
                 }
                 using (var db = DbConnectionFactory.OpenDbConnection())
                 {                    
                     Result = db.Scalar<int>(
-                        db.From<Jmjm6>()
-                        .Select(Sql.Count("*"))
-                        .Where(j6 => j6.JobNo == request.JobNo && j6.ContainerNo == request.ContainerNo)
+                        "Select count(*) From Jmjm6 Where Jmjm6.JobNo={0} And jmjm6.ContainerNo={1}",request.JobNo,request.ContainerNo
                     );
                     if (Result < 1)
                     {
                         int count = db.Scalar<int>(
-                            db.From<Jmjm6>()
-                            .Select(Sql.Count("*"))
-                            .Where(j6 => j6.JobNo == request.JobNo)
+                            "Select count(*) From Jmjm6 Where Jmjm6.JobNo={0}",request.JobNo
                         );
-                        Result = db.Insert<Jmjm6>(new Jmjm6 { JobNo = request.JobNo, LineItemNo = count + 1, ContainerNo = request.ContainerNo });
+                        db.Insert<Jmjm6>(new Jmjm6 { JobNo = request.JobNo, LineItemNo = count + 1, ContainerNo = request.ContainerNo });
+                        Result = 0;
                     }
                     else { Result = -1; }
                 }

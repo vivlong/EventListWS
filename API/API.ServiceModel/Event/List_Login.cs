@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ServiceStack;
-using ServiceStack.Data;
+using ServiceStack.ServiceHost;
 using ServiceStack.OrmLite;
 
 namespace TmsWS.ServiceModel.Event
@@ -42,20 +42,11 @@ namespace TmsWS.ServiceModel.Event
                 {
                     if (request.PhoneNumber.Length > 0)
                     {
-                        Result = db.Scalar<int>(
-                            db.From<Jmjm4>()
-                            .Select(Sql.Count("*"))
-                            .Where(j4 => j4.PhoneNumber == request.PhoneNumber)
-                        );
+                        Result = db.Scalar<int>("Select count(*) From Jmjm4 Where PhoneNumber={0}", request.PhoneNumber);
                     }
                     else if (request.CustomerCode.Length > 0 && request.JobNo.Length > 0)
                     {
-                        Result = db.Scalar<int>(
-                            db.From<Jmjm6>()
-                            .LeftJoin<Jmjm6, Jmjm1>((j6,j1) => j6.JobNo == j1.JobNo)
-                            .Select(Sql.Count("*"))
-                            .Where<Jmjm1>(j1 => j1.StatusCode != "DEL" && j1.JobNo == request.JobNo)
-                        );
+                        Result = db.Scalar<int>("Select count(*) From Jmjm6 Left Join Jmjm1 on Jmjm6.JobNo=Jmjm1.JobNo Where Jmjm1.StatusCode<>'DEL' and Jmjm1.JobNo={0}", request.JobNo);
                     }                    
                 }
             }
@@ -69,7 +60,7 @@ namespace TmsWS.ServiceModel.Event
             {
                 using (var db = DbConnectionFactory.OpenDbConnection())
                 {
-                    Result = db.Single<string>("Select Top 1 ISNULL(DriverName,'') From Jmjm4 Where PhoneNumber=" + Modfunction.SQLSafeValue(request.PhoneNumber) + "");
+                    Result = db.QuerySingle<string>("Select Top 1 ISNULL(DriverName,'') From Jmjm4 Where PhoneNumber=" + Modfunction.SQLSafeValue(request.PhoneNumber));
                 }
             }
             catch { throw; }
