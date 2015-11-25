@@ -1,4 +1,4 @@
-# EventListWS
+# EventListWS ( Deprecated !!! )
 SysFreight EventList Project    
 
 Development Enviroment:  
